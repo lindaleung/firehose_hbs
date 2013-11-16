@@ -1,0 +1,15 @@
+<div class="span4 boxy">
+	<h1 class="h1-custom text-center">
+		New Pic:
+	</h1>
+
+	<h2>
+		<%= simple_form_for @pic do |f|%>
+			<%= f.input	:lesson %>
+			<%= f.input :emotion %>
+			<%= f.input	:learned %>
+
+			<%= submit_tag 'Save' %>
+	 	<%end%>
+	</h2>
+</div>
