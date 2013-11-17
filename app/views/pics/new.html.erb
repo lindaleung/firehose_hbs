@@ -1,18 +1,21 @@
 <div class="span6 offset3 text-center boxy">
 	<h1 class="h1-custom">
-		Upload a New Lesson:
+		Create a new update
 	</h1>
 	<br/>
 		<%= simple_form_for @pic do |f|%>
 
-			<%= f.input	:lesson, :label => 'Your latest lesson', :placeholder => '#' %>
-			 <!-- the format above is the same as the format below -->
+			<%= f.input	:lesson, :label => 'Number your update', :placeholder => '#' %>
+
+			<%= f.input :image, :label => 'Upload a photo' %>
+
+			 <!-- the format for label is the same as the format below -->
 			 <!-- cmd+? puts in a comment -->
 			 <!-- making a lable class in css automatically styles these labels -->
-			<%= f.input :emotion, label: 'How did you feel?', placeholder: 'Happy, sad, etc' %>
+			<%= f.input :emotion, label: 'How do you feel?', placeholder: 'Happy, sad, etc' %>
 			<%= f.input	:learned, label: 'What did you learn?', placeholder: 'HTML5, CSS, Github, etc' %>
 			<br/>
 
-			<%= submit_tag 'Submit', :class => 'btn btn-success	' %>
+			<%= submit_tag 'Push to Stream', :class => 'btn btn-success	' %>
 	 	<%end%>
 </div>
