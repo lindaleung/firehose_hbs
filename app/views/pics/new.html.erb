@@ -1,15 +1,18 @@
-<div class="span3 boxy">
-	<h1 class="h1-custom text-center">
-		New Pic:
+<div class="span6 offset3 text-center boxy">
+	<h1 class="h1-custom">
+		Upload a New Lesson:
 	</h1>
-
-	<h2>
+	<br/>
 		<%= simple_form_for @pic do |f|%>
-			<%= f.input	:lesson %>
-			<%= f.input :emotion %>
-			<%= f.input	:learned %>
 
-			<%= submit_tag 'Save' %>
+			<%= f.input	:lesson, :label => 'Your latest lesson', :placeholder => '#' %>
+			 <!-- the format above is the same as the format below -->
+			 <!-- cmd+? puts in a comment -->
+			 <!-- making a lable class in css automatically styles these labels -->
+			<%= f.input :emotion, label: 'How did you feel?', placeholder: 'Happy, sad, etc' %>
+			<%= f.input	:learned, label: 'What did you learn?', placeholder: 'HTML5, CSS, Github, etc' %>
+			<br/>
+
+			<%= submit_tag 'Submit', :class => 'btn btn-success	' %>
 	 	<%end%>
-	</h2>
 </div>
